@@ -16,6 +16,16 @@ import { LoginInterceptor } from './views/pages/auth/login/login.interceptor';
 import { LoginService } from './services/administrator/login.service';
 import { UserComponent } from './views/pages-doo/administrator_pages/user/user.component';
 import { ProfileComponent } from './views/pages-doo/administrator_pages/profile/profile.component';
+import { ProviderPagesComponent } from './views/pages-doo/provider_pages/provider-pages.component';
+import { BudgetsPagesComponent } from './views/pages-doo/budgets-pages/budgets-pages.component';
+import { InputCategoryComponent } from './views/pages-doo/configuration_pages/input-category/input-category.component';
+import { InputSubCategoryComponent } from './views/pages-doo/configuration_pages/input-sub-category/input-sub-category.component';
+import { LocationComponent } from './views/pages-doo/configuration_pages/location/location.component';
+import { OutputCategoryComponent } from './views/pages-doo/configuration_pages/output-category/output-category.component';
+import { OutputSubCategoryComponent } from './views/pages-doo/configuration_pages/output-sub-category/output-sub-category.component';
+import { PaymentMethodsComponent } from './views/pages-doo/configuration_pages/payment-methods/payment-methods.component';
+import { TripCategoryComponent } from './views/pages-doo/configuration_pages/trip-category/trip-category.component';
+import { TripSubCategoryComponent } from './views/pages-doo/configuration_pages/trip-sub-category/trip-sub-category.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +33,16 @@ import { ProfileComponent } from './views/pages-doo/administrator_pages/profile/
     ErrorPageComponent,
     UserComponent,
     ProfileComponent,
+    ProviderPagesComponent,
+    BudgetsPagesComponent,
+    LocationComponent,
+    TripCategoryComponent,
+    TripSubCategoryComponent,
+    InputCategoryComponent,
+    OutputCategoryComponent,
+    PaymentMethodsComponent,
+    InputSubCategoryComponent,
+    OutputSubCategoryComponent,
   ],
   imports: [
     BrowserModule,

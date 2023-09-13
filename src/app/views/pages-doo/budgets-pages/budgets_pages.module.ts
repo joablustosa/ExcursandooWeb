@@ -3,25 +3,25 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { MessagesPagesComponent } from './messages-pages.component';
+import { BudgetsPagesComponent } from './budgets-pages.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MessagesPagesComponent,
+    component: BudgetsPagesComponent,
     children: [
       {
         path: '',
-        redirectTo: 'messages',
+        redirectTo: 'budgets',
         pathMatch: 'full'
       },
       {
-        path: 'all-trips',
-        component: MessagesPagesComponent
+        path: 'budgets',
+        component: BudgetsPagesComponent
       },
       // {
-      //   path: 'new-trip',
-      //   component: NewTripComponent
+      //   path: 'calendar-payments',
+      //   component: CalendarPaymentsComponent
       // },
       // {
       //   path: 'all-trips/trip-details',
@@ -33,7 +33,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    MessagesPagesComponent
+    BudgetsPagesComponent
   ],
   imports: [
     CommonModule,
@@ -41,4 +41,4 @@ const routes: Routes = [
     NgxDatatableModule
   ]
 })
-export class MessagesPagesModule { }
+export class BudgetsPagesModule { }

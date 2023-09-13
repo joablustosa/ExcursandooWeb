@@ -3,21 +3,22 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { ChecklistsPagesComponent } from './checklists-pages.component';
 
 const routes: Routes = [
   {
     path: '',
-    // component: AllTripsComponent,
+    component: ChecklistsPagesComponent,
     children: [
-      // {
-      //   path: '',
-      //   redirectTo: 'all-trips',
-      //   pathMatch: 'full'
-      // },
-      // {
-      //   path: 'all-trips',
-      //   component: AllTripsComponent
-      // },
+      {
+        path: '',
+        redirectTo: 'checklists',
+        pathMatch: 'full'
+      },
+      {
+        path: 'checklists',
+        component: ChecklistsPagesComponent
+      },
       // {
       //   path: 'new-trip',
       //   component: NewTripComponent
@@ -31,7 +32,9 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ChecklistsPagesComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

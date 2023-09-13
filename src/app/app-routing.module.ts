@@ -41,6 +41,18 @@ const routes: Routes = [
         loadChildren: () => import('./views/pages-doo/reports_pages/reports.module').then(m => m.ReportsModule)
       },
       {
+        path: 'providers',
+        loadChildren: () => import('./views/pages-doo/provider_pages/provider_pages.module').then(m => m.ProviderPagesModule)
+      },
+      {
+        path: 'budgets',
+        loadChildren: () => import('./views/pages-doo/budgets-pages/budgets_pages.module').then(m => m.BudgetsPagesModule)
+      },
+      {
+        path: 'configurations',
+        loadChildren: () => import('./views/pages-doo/configuration_pages/configurations_pages.module').then(m => m.ConfigurationsPagesModule)
+      },
+      {
         path: 'apps',
         loadChildren: () => import('./views/pages/apps/apps.module').then(m => m.AppsModule)
       },

@@ -19,12 +19,12 @@ export const MENU: MenuItem[] = [
    {
     label: 'Checklist',
     icon: 'check-square',
-    link: '/auth/login',
+    link: '/checklists',
    },
    {
     label: 'Fornecedores',
     icon: 'user-check',
-    link: '/error/404',
+    link: '/providers',
    },
    {
     label: 'Excursões',
@@ -38,12 +38,12 @@ export const MENU: MenuItem[] = [
    {
     label: 'Mensagens',
     icon: 'inbox',
-    link: '/apps/email/inbox',
+    link: '/messages',
    },
    {
     label: 'Orçamento de Frete',
     icon: 'clipboard',
-    link: '/apps/chat',
+    link: '/budgets',
    },
    {
     label: 'Relatórios',
@@ -51,15 +51,15 @@ export const MENU: MenuItem[] = [
     subItems: [
      {
       label: 'Receita',
-      link: '/general/blank-page',
+      link: '/reports/report-money',
      },
      {
       label: 'Viajantes',
-      link: '/general/faq',
+      link: '/reports/report-trevelers',
      },
      {
-      label: 'Rotas de viagem',
-      link: '/general/faq',
+      label: 'Rotas de Excursão',
+      link: '/reports/report-trips',
      },
     ],
    },
@@ -70,37 +70,27 @@ export const MENU: MenuItem[] = [
    {
     label: 'Controle de caixa',
     icon: 'dollar-sign',
-    subItems: [
-     {
-      label: 'Entradas e saídas',
-      link: '/general/blank-page',
-     },
-     {
-      label: 'Agendar pagamentos',
-      link: '/general/faq',
-     },
-    ]
+    link: '/money',
    },
    {
-    label: 'Localidades',
-    icon: 'compass',
-    link: '/apps/chat',
+    label: 'Agendar Pagamentos',
+    icon: 'calendar',
+    link: '/money/calendar-payments',
    },
-   {
-    label: 'Categorias',
-    icon: 'list',
-    link: '/apps/chat',
-   },
-   {
-    label: 'Sub-Categorias',
-    icon: 'award',
-    link: '/apps/chat',
-   },
-   {
-    label: 'Formas de pagamentos',
-    icon: 'credit-card',
-    link: '/apps/chat',
-   },
+  //  {
+  //   label: 'Controle de caixa',
+  //   icon: 'dollar-sign',
+  //   subItems: [
+  //    {
+  //     label: 'Entradas e saídas',
+  //     link: '/general/blank-page',
+  //    },
+  //    {
+  //     label: 'Agendar pagamentos',
+  //     link: '/general/faq',
+  //    },
+  //   ]
+  //  },
    {
     label: 'Relatórios',
     icon: 'trello',
@@ -118,6 +108,62 @@ export const MENU: MenuItem[] = [
       link: '/ui-components/alerts',
      },
     ]
+   },
+   {
+    label: 'Configurações',
+    isTitle: true
+   },
+   {
+    label: 'Localidades',
+    icon: 'compass',
+    link: 'configurations/location',
+   },
+   {
+    label: 'Categorias Excursão',
+    icon: 'star',
+    subItems: [
+      {
+       label: 'Categorias',
+       link: 'configurations/trip-category',
+      },
+      {
+       label: 'Sub-Categorias',
+       link: 'configurations/trip-sub-category',
+      },
+    ]
+   },
+   {
+    label: 'Entradas Financeiras',
+    icon: 'chevrons-up',
+    subItems: [
+      {
+       label: 'Categorias',
+       link: 'configurations/input-category',
+      },
+      {
+       label: 'Sub-Categorias',
+       link: 'configurations/input-sub-category',
+      },
+    ]
+   },
+   {
+    label: 'Saídas Financeiras',
+    icon: 'chevrons-down',
+    subItems: [
+      {
+       label: 'Categorias',
+       link: 'configurations/output-category',
+      },
+      {
+       label: 'Sub-Categorias',
+       link: 'configurations/output-sub-category',
+      },
+    ]
+   },
+   {
+    label: 'Formas de pagamentos',
+    icon: 'credit-card',
+    link: 'configurations/payment-methods',
    },
   ];
   
