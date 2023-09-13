@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { Permissao, PerfilPagina } from 'src/app/shared/administracao/permissao.model';
+import { PerfilPagina, Permissao } from 'src/app/models/administracao/permissao.model';
 
 
 @Injectable()

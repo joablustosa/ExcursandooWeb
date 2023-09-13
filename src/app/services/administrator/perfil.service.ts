@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { NovoPerfil } from 'src/app/shared/administracao/novoPerfil.model';
+import { NovoPerfil } from 'src/app/models/administracao/novoPerfil.model';
 
 
 @Injectable()

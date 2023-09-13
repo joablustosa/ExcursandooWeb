@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { ChecklistModel } from 'src/app/shared/checklist-models/checklist.model';
+import { ChecklistModel } from 'src/app/models/checklist-models/checklist.model';
 
 
 @Injectable()

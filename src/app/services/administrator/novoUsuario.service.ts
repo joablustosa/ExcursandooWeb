@@ -3,8 +3,8 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { NovoUsuario } from 'src/app/shared/administracao/novoUsuario.model';
-import { Permissao } from 'src/app/shared/administracao/permissao.model';
+import { NovoUsuario } from 'src/app/models/administracao/novoUsuario.model';
+import { Permissao } from 'src/app/models/administracao/permissao.model';
 
 
 @Injectable()

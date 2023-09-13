@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { MessageModel } from 'src/app/shared/message-models/message.model';
+import { MessageModel } from 'src/app/models/message-models/message.model';
 
 
 @Injectable()

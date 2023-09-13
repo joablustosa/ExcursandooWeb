@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { UsuarioApi } from 'src/app/models/administracao/usuarioApi.model';
+import { LoginService } from 'src/app/services/administrator/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,22 +10,32 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  title = 'Excursandoo!';
   returnUrl: any;
-
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  loginForm!: FormGroup;
 
   ngOnInit(): void {
-    // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    // this.loginService.logado();
+    this.validationForm();
   }
 
-  onLoggedin(e: Event) {
-    e.preventDefault();
-    localStorage.setItem('isLoggedin', 'true');
-    if (localStorage.getItem('isLoggedin')) {
-      this.router.navigate([this.returnUrl]);
-    }
+  constructor(
+    private loginService: LoginService,
+    public router: Router,
+    private fb: FormBuilder
+  ) { }
+
+  onLoggedin() {
+    var userDoo = Object.assign({}, this.loginForm.value);
+    this.loginService.efetivaLogin(userDoo);
   }
 
+  validationForm(){
+    this.loginForm = this.fb.group(
+      {
+        usuarioLogin: ['', Validators.required],
+        chaveDeAcesso: ['', Validators.required]
+      }
+    );
+  }
 }

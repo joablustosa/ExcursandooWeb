@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { Menu } from 'src/app/shared/administracao/menu.model';
+import { Menu } from 'src/app/models/administracao/menu.model';
 
 
 @Injectable()
