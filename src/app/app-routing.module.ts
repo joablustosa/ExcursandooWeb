@@ -17,6 +17,30 @@ const routes: Routes = [
         loadChildren: () => import('./views/pages/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
+        path: 'all-trips',
+        loadChildren: () => import('./views/pages-doo/trips_pages/trips_pages.module').then(m => m.TripsPagesModule)
+      },
+      {
+        path: 'administrator',
+        loadChildren: () => import('./views/pages-doo/administrator_pages/administrator_pages.module').then(m => m.AdministratorPagesModule)
+      },
+      {
+        path: 'checklists',
+        loadChildren: () => import('./views/pages-doo/checklists_pages/checklists_pages.module').then(m => m.ChecklistsPagesModule)
+      },
+      {
+        path: 'messages',
+        loadChildren: () => import('./views/pages-doo/messages_pages/messages_pages.module').then(m => m.MessagesPagesModule)
+      },
+      {
+        path: 'money',
+        loadChildren: () => import('./views/pages-doo/money_pages/money_pages.module').then(m => m.MoneyPagesModule)
+      },
+      {
+        path: 'reports',
+        loadChildren: () => import('./views/pages-doo/reports_pages/reports.module').then(m => m.ReportsModule)
+      },
+      {
         path: 'apps',
         loadChildren: () => import('./views/pages/apps/apps.module').then(m => m.AppsModule)
       },

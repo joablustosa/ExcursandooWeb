@@ -33,7 +33,7 @@ export const MENU: MenuItem[] = [
    {
     label: 'Minhas Excursões',
     icon: 'star',
-    link: '/apps/email/inbox',
+    link: '/all-trips',
    },
    {
     label: 'Mensagens',
