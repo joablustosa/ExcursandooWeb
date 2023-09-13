@@ -27,7 +27,11 @@
                 </label>
               </div>
               <div>
-                <button class="btn btn-success me-2 mb-2 mb-md-0" (click)="onLoggedin()">Login</button>
+                <button *ngIf="!loading" class="btn btn-success me-2 mb-2 mb-md-0" (click)="onLoggedin()">Login</button>
+                <button *ngIf="loading" class="btn btn-success" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Loading...
+                </button>
                 <!-- <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0">
                   <i class="feather icon-twitter btn-icon-prepend"></i>
                   Login with twitter

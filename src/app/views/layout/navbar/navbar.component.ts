@@ -31,9 +31,9 @@ export class NavbarComponent implements OnInit {
    */
   onLogout(e: Event) {
     e.preventDefault();
-    localStorage.removeItem('isLoggedin');
-
-    if (!localStorage.getItem('isLoggedin')) {
+    localStorage.removeItem('tokenSection');
+    localStorage.removeItem('userSection');
+    if (!localStorage.getItem('tokenSection') && !localStorage.getItem('userSection')) {
       this.router.navigate(['/auth/login']);
     }
   }

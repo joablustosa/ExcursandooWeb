@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   title = 'Excursandoo!';
   returnUrl: any;
   loginForm!: FormGroup;
+  loading: boolean = false;
 
   ngOnInit(): void {
     // this.loginService.logado();
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   onLoggedin() {
+    this.loading = true;
     var userDoo = Object.assign({}, this.loginForm.value);
     this.loginService.efetivaLogin(userDoo);
   }

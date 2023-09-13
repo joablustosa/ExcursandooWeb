@@ -5,6 +5,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { UserAud } from 'src/app/models/administracao/menu.model';
 import { UsuarioApi } from 'src/app/models/administracao/usuarioApi.model';
 import { AppConstants } from 'src/app/AppConstants';
+import { error } from 'console';
 
 @Injectable()
 
@@ -41,20 +42,18 @@ export class LoginService {
           //   menu => {
           //     var userAud = JSON.stringify(menu);
           //     localStorage.setItem('userAud', userAud);
-          //     if (usuarioApi.chaveDeAcesso == 'gb3000') {
-          //       this.router.navigate(["/resetarSenha"]);
-          //     } else {
-          //       this.router.navigate([`/dashboard`]);
-          //     }
+          //     this.router.navigate([`/dashboard`]);
           //   }, error => {
           //     console.log("teste");
           //   });
 
         } else {
           this.router.navigate(["/login"]);
-      }
-    });
-  }
+        }
+      }, error => {
+
+      });
+    }
 
 
   public async efetivaLoginAlteraSenha(usuarioApi: UsuarioApi) {

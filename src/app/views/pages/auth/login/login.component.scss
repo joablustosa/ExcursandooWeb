@@ -4,3 +4,15 @@
   align-items: center;
   justify-content: center;
 }
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Isso garante que o container cubra toda a altura da tela */
+  position: fixed; /* Isso mantém o spinner fixo na tela enquanto ela rola */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para destacar o spinner */
+}

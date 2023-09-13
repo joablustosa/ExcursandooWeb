@@ -30,6 +30,7 @@ import { LoginService } from './services/administrator/login.service';
   providers: [
     AuthGuard,
     LoginService,
+    
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoginInterceptor,
