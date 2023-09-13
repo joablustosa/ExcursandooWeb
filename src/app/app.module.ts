@@ -19,6 +19,9 @@ import { ProfileComponent } from './views/pages-doo/administrator_pages/profile/
 import { AllTripsComponent } from './views/pages-doo/trips_pages/all-trips/all-trips.component';
 import { NewTripComponent } from './views/pages-doo/trips_pages/new-trip/new-trip.component';
 import { TripDetailsComponent } from './views/pages-doo/trips_pages/all-trips/trip-details/trip-details.component';
+import { ReportTripsComponent } from './views/pages-doo/reports_pages/report-trips/report-trips.component';
+import { ReportTrevelersComponent } from './views/pages-doo/reports_pages/report-trevelers/report-trevelers.component';
+import { ReportMoneyComponent } from './views/pages-doo/reports_pages/report-money/report-money.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { TripDetailsComponent } from './views/pages-doo/trips_pages/all-trips/tr
     AllTripsComponent,
     NewTripComponent,
     TripDetailsComponent,
+    ReportTripsComponent,
+    ReportTrevelersComponent,
+    ReportMoneyComponent,
   ],
   imports: [
     BrowserModule,
