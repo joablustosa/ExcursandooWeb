@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataTable } from 'simple-datatables';
 
 @Component({
   selector: 'app-report-trips',
@@ -10,6 +11,6 @@ export class ReportTripsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const dataTable = new DataTable("#dataTableExample");
   }
-
 }

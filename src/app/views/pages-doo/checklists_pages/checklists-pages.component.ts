@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChecklistsPagesComponent implements OnInit {
 
+  public isAsideNavCollapsed = true;
+
   constructor() { }
 
   ngOnInit(): void {

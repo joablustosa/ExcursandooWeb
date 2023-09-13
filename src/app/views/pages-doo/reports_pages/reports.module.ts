@@ -11,7 +11,7 @@ import { ReportTripsComponent } from './report-trips/report-trips.component';
 const routes: Routes = [
   {
     path: '',
-    component: ReportsPagesComponent,
+    // component: ReportsPagesComponent,
     children: [
       {
         path: '',

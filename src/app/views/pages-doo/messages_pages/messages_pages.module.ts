@@ -4,6 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { MessagesPagesComponent } from './messages-pages.component';
+import { FormsModule } from '@angular/forms';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { NgbDropdownModule, NgbTooltipModule, NgbNavModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { QuillModule } from 'ngx-quill';
 
 const routes: Routes = [
   {
@@ -38,7 +44,15 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    NgxDatatableModule
+    FormsModule,
+    FullCalendarModule, 
+    PerfectScrollbarModule,
+    NgbDropdownModule,
+    NgbTooltipModule,
+    NgbNavModule,
+    NgbCollapseModule,
+    NgSelectModule,
+    QuillModule.forRoot(), 
   ]
 })
 export class MessagesPagesModule { }

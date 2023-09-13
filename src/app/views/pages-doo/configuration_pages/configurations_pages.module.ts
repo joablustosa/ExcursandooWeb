@@ -60,14 +60,14 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+    LocationComponent,
     TripCategoryComponent,
     TripSubCategoryComponent,
+    InputCategoryComponent,
+    OutputCategoryComponent,
     PaymentMethodsComponent,
     InputSubCategoryComponent,
-    InputCategoryComponent,
     OutputSubCategoryComponent,
-    OutputCategoryComponent,
-    LocationComponent
   ],
   imports: [
     CommonModule,
