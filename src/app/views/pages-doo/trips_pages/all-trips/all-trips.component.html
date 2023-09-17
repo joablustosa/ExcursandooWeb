@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<div class="row">
+<div *ngIf="!isLoading" class="row">
   <div class="col-md-12 stretch-card">
     <div class="card">
       <div class="card-body">
@@ -36,6 +36,7 @@
               #maxlength="ngModel" maxlength="5" />
           </div>
         </div>
+
         <div class="table-responsive">
           <ngx-datatable class="bootstrap" [rows]="filteredData" [loadingIndicator]="loadingIndicator"
             [columnMode]="ColumnMode.force" [footerHeight]="50" [limit]="page.size" rowHeight="auto"
@@ -60,17 +61,45 @@
                 </figure>
               </ng-template>
             </ngx-datatable-column>
+            <ngx-datatable-column name="Status">
+              <ng-template let-column="column" ngx-datatable-header-template>
+                <span>Status</span>
+              </ng-template>
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="checkbox" [(ngModel)]="row.status" (change)="logValue(row)" >
+                  
+                </div>
+              </ng-template>
+            </ngx-datatable-column>
             <ngx-datatable-column name="date_start">
               <ng-template let-column="column" ngx-datatable-header-template>
                 <span>Ida</span>
               </ng-template>
               <ng-template let-row="row" ngx-datatable-cell-template>
                 <figure class="mb-0 me-2">
-                  {{row.date_start | date: "dd/MM/Y"}}
+                  <button type="button" class="btn btn-icon btn-info" style="margin-right: 5px;">
+                    <i class="feather icon-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-icon btn-warning" style="margin-right: 5px; margin-left: 5px;">
+                    <i class="feather icon-users"></i>
+                  </button>
+                  <button type="button" class="btn btn-icon btn-success" style="margin-right: 5px; margin-left: 5px;">
+                    <i class="feather icon-dollar-sign"></i>
+                  </button>
+                  <button type="button" class="btn btn-icon btn-danger" style="margin-right: 5px; margin-left: 5px;">
+                    <i class="feather icon-dollar-sign"></i>
+                  </button>
+                  <button type="button" class="btn btn-icon btn-facebook" style="margin-right: 5px; margin-left: 5px;">
+                    <i class="feather icon-check-square"></i>
+                  </button>
+                  <button type="button" class="btn btn-icon btn-secondary" style="margin-left: 5px;">
+                    <i class="feather icon-trash-2"></i>
+                  </button>
                 </figure>
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="date_end">
+            <!-- <ngx-datatable-column name="date_end">
               <ng-template let-column="column" ngx-datatable-header-template>
                 <span>Volta</span>
               </ng-template>
@@ -79,20 +108,13 @@
                   {{row.date_end | date: "dd/MM/Y"}}
                 </figure>
               </ng-template>
-            </ngx-datatable-column>
-            <ngx-datatable-column name="Status">
-              <ng-template let-column="column" ngx-datatable-header-template>
-                <span>Status</span>
-              </ng-template>
-              <ng-template let-row="row" ngx-datatable-cell-template>
-                <figure class="mb-0 me-2">
-                  {{row.status}}
-                </figure>
-              </ng-template>
-            </ngx-datatable-column>
+            </ngx-datatable-column> -->
           </ngx-datatable>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div *ngIf="isLoading" class="spinner-wrapper">
+  <div class="spinner">Loading...</div>
 </div>

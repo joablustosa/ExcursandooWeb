@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ProviderPagesComponent } from './provider-pages.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
@@ -36,7 +37,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    NgxDatatableModule
+    NgxDatatableModule,
+    NgbModule
   ]
 })
 export class ProviderPagesModule { }

@@ -7,10 +7,13 @@ import { DataTable } from 'simple-datatables';
   styleUrls: ['./provider-pages.component.scss']
 })
 export class ProviderPagesComponent implements OnInit {
+  isLoading!: boolean;
+  currentRate = 5;
 
   constructor() { }
 
   ngOnInit(): void {
     const dataTable = new DataTable("#dataTableExample");
+    this.isLoading = false;
   }
 }

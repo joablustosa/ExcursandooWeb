@@ -25,6 +25,7 @@ export class AllTripsComponent implements OnInit {
     count: 0,
     offset: 0
   };
+  isLoading!: boolean;
 
   constructor(
     private http: HttpClient,
@@ -36,11 +37,29 @@ export class AllTripsComponent implements OnInit {
     const dataTable = new DataTable("#dataTableExample");
   }
 
+  logValue(tripModel: TripModel) {
+    this.isLoading = true;
+    var novoStatus;
+    if(tripModel.status == 1){
+      novoStatus = true;
+    }else{
+      novoStatus = false;
+    }
+    tripModel.status = novoStatus ? 1 : 0;
+    this.tripService.putTrip(tripModel).subscribe(
+      data => {
+        this.isLoading = true;
+      this.getDataTrips();
+    });
+  }
+
   getDataTrips() {
+    this.isLoading = true;
     this.tripService.getAllTrip().subscribe(
       data => {
       this.trips = data as TripModel[];
       this.page.count = this.trips.length;
+      this.isLoading = false;
     });
   }
 

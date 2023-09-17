@@ -22,7 +22,7 @@
     "@angular/router": "^14.2.10",
     "@auth0/angular-jwt": "^5.1.2",
     "@fullcalendar/angular": "^5.11.3",
-    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/core": "^5.11.5",
     "@fullcalendar/daygrid": "^5.11.3",
     "@fullcalendar/interaction": "^5.11.3",
     "@fullcalendar/list": "^5.11.3",

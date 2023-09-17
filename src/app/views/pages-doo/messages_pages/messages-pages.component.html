@@ -13,8 +13,8 @@
                         <div class="status online"></div>
                       </figure>
                       <div>
-                        <h6>Amiah Burton</h6>
-                        <p class="text-muted tx-13">Software Developer</p>
+                        <h6>Joab Ferreira</h6>
+                        <p class="text-muted tx-13">Excurseiro desde: 13/03/1991</p>
                       </div>
                     </div>
                     <div class="dropdown" ngbDropdown>
@@ -22,10 +22,8 @@
                         <i class="feather icon-settings icon-md text-muted pb-3px" ngbTooltip="Settings"></i>
                       </button>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" ngbDropdownMenu>
-                        <a class="dropdown-item d-flex align-items-center" href="" (click)="false"><i class="feather icon-eye icon-sm me-2"></i> <span class="">View Profile</span></a>
-                        <a class="dropdown-item d-flex align-items-center" href="" (click)="false"><i class="feather icon-edit-2 icon-sm me-2"></i> <span class="">Edit Profile</span></a>
-                        <a class="dropdown-item d-flex align-items-center" href="" (click)="false"><i class="feather icon-aperture icon-sm me-2"></i> <span class="">Add status</span></a>
-                        <a class="dropdown-item d-flex align-items-center" href="" (click)="false"><i class="feather icon-settings icon-sm me-2"></i> <span class="">Settings</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="" (click)="false"><i class="feather icon-eye icon-sm me-2"></i> <span class="">Editar Perfil</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="" (click)="false"><i class="feather icon-edit-2 icon-sm me-2"></i> <span class="">Ver Perfil</span></a>
                       </div>
                     </div>
                   </div>
@@ -34,7 +32,7 @@
                       <div class="input-group-text">
                         <i class="feather icon-search icon-md cursor-pointer"></i>
                       </div>
-                      <input type="text" class="form-control" id="searchForm" placeholder="Search here...">
+                      <input type="text" class="form-control" id="searchForm" placeholder="Pesquisar...">
                     </div>
                   </form>
                 </div>
@@ -44,12 +42,12 @@
                       <a ngbNavLink>
                         <div class="d-flex flex-row flex-lg-column flex-xl-row align-items-center justify-content-center">
                           <i class="feather icon-message-square icon-xs me-sm-2 me-lg-0 me-xl-2 mb-md-1 mb-xl-0"></i>
-                          <p class="d-none d-sm-block">Chats</p>
+                          <p class="d-none d-sm-block">Possíveis Clientes</p>
                         </div>
                       </a>
                       <ng-template ngbNavContent>
                         <div class="ps" [perfectScrollbar]>
-                          <p class="text-muted mb-1">Recent chats</p>
+                          <p class="text-muted mb-1">Novas mensagens</p>
                           <ul class="list-unstyled chat-list px-1">
                             <li class="chat-item pe-1">
                               <a href="" (click)="false" class="d-flex align-items-center">
@@ -60,179 +58,11 @@
                                 <div class="d-flex justify-content-between flex-grow-1 border-bottom">
                                   <div>
                                     <p class="text-body fw-bolder">John Doe</p>
-                                    <p class="text-muted tx-13">Hi, How are you?</p>
+                                    <p class="text-muted tx-13">blá blá blá</p>
                                   </div>
                                   <div class="d-flex flex-column align-items-end">
                                     <p class="text-muted tx-13 mb-1">4:32 PM</p>
                                     <div class="badge rounded-pill bg-primary ms-auto">5</div>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status offline"></div>
-                                </figure>
-                                <div class="d-flex justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body fw-bolder">Carl Henson</p>
-                                    <div class="d-flex align-items-center">
-                                      <i class="feather icon-image text-muted icon-md mb-2px"></i>
-                                      <p class="text-muted ms-1">Photo</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <p class="text-muted tx-13 mb-1">05:24 PM</p>
-                                    <div class="badge rounded-pill bg-danger ms-auto">3</div>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status offline"></div>
-                                </figure>
-                                <div class="d-flex justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">John Doe</p>
-                                    <p class="text-muted tx-13">Hi, How are you?</p>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <p class="text-muted tx-13 mb-1">Yesterday</p>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status online"></div>
-                                </figure>
-                                <div class="d-flex justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">Jensen Combs</p>
-                                    <div class="d-flex align-items-center">
-                                      <i class="feather icon-video text-muted icon-md mb-2px"></i>
-                                      <p class="text-muted ms-1">Video</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <p class="text-muted tx-13 mb-1">2 days ago</p>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status offline"></div>
-                                </figure>
-                                <div class="d-flex justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">Yaretzi Mayo</p>
-                                    <p class="text-muted tx-13">Hi, How are you?</p>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <p class="text-muted tx-13 mb-1">4 week ago</p>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status offline"></div>
-                                </figure>
-                                <div class="d-flex justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body fw-bolder">John Doe</p>
-                                    <p class="text-muted tx-13">Hi, How are you?</p>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <p class="text-muted tx-13 mb-1">4:32 PM</p>
-                                    <div class="badge rounded-pill bg-primary ms-auto">5</div>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status online"></div>
-                                </figure>
-                                <div class="d-flex justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body fw-bolder">Leonardo Payne</p>
-                                    <div class="d-flex align-items-center">
-                                      <i class="feather icon-image text-muted icon-md mb-2px"></i>
-                                      <p class="text-muted ms-1">Photo</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <p class="text-muted tx-13 mb-1">6:11 PM</p>
-                                    <div class="badge rounded-pill bg-danger ms-auto">3</div>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status online"></div>
-                                </figure>
-                                <div class="d-flex justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">John Doe</p>
-                                    <p class="text-muted tx-13">Hi, How are you?</p>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <p class="text-muted tx-13 mb-1">Yesterday</p>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status online"></div>
-                                </figure>
-                                <div class="d-flex justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">Leonardo Payne</p>
-                                    <div class="d-flex align-items-center">
-                                      <i class="video text-muted icon-md mb-2px"></i>
-                                      <p class="text-muted ms-1">Video</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <p class="text-muted tx-13 mb-1">2 days ago</p>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status online"></div>
-                                </figure>
-                                <div class="d-flex justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">John Doe</p>
-                                    <p class="text-muted tx-13">Hi, How are you?</p>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <p class="text-muted tx-13 mb-1">4 week ago</p>
                                   </div>
                                 </div>
                               </a>
@@ -245,12 +75,12 @@
                       <a ngbNavLink>
                         <div class="d-flex flex-row flex-lg-column flex-xl-row align-items-center justify-content-center">
                           <i class="feather icon-phone-call icon-xs me-sm-2 me-lg-0 me-xl-2 mb-md-1 mb-xl-0"></i>
-                          <p class="d-none d-sm-block">Calls</p>
+                          <p class="d-none d-sm-block">Clientes</p>
                         </div>
                       </a>
                       <ng-template ngbNavContent>
                         <div class="ps" [perfectScrollbar]>
-                          <p class="text-muted mb-1">Recent calls</p>
+                          <p class="text-muted mb-1">Mensagens</p>
                           <ul class="list-unstyled chat-list px-1">
                             <li class="chat-item pe-1">
                               <a href="" (click)="false" class="d-flex align-items-center">
@@ -272,209 +102,10 @@
                                 </div>
                               </a>
                             </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status offline"></div>
-                                </figure>
-                                <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">Leonardo Payne</p>
-                                    <div class="d-flex align-items-center">
-                                      <i class="feather icon-arrow-down-left icon-xs text-success me-1"></i>
-                                      <p class="text-muted tx-13">Today, 11:41 AM</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <i class="feather icon-video text-primary icon-sm"></i>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status offline"></div>
-                                </figure>
-                                <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">Carl Henson</p>
-                                    <div class="d-flex align-items-center">
-                                      <i class="feather icon-arrow-down-left icon-xs text-danger me-1"></i>
-                                      <p class="text-muted tx-13">Today, 04:24 PM</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <i class="feather icon-phone-call text-primary icon-sm"></i>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status online"></div>
-                                </figure>
-                                <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">Jensen Combs</p>
-                                    <div class="d-flex align-items-center">
-                                      <i class="feather icon-arrow-down-left icon-xs text-danger me-1"></i>
-                                      <p class="text-muted tx-13">Today, 12:53 AM</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <i class="feather icon-video text-primary icon-sm"></i>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status online"></div>
-                                </figure>
-                                <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">John Doe</p>
-                                    <div class="d-flex align-items-center">
-                                      <i class="feather icon-arrow-down-left icon-xs text-success me-1"></i>
-                                      <p class="text-muted tx-13">Today, 01:42 AM</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <i class="feather icon-video text-primary icon-sm"></i>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status offline"></div>
-                                </figure>
-                                <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">John Doe</p>
-                                    <div class="d-flex align-items-center">
-                                      <i class="feather icon-arrow-up-right icon-xs text-success me-1"></i>
-                                      <p class="text-muted tx-13">Today, 12:01 AM</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex flex-column align-items-end">
-                                    <i class="feather icon-phone-call text-primaryicon-sm"></i>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
                           </ul>
                         </div>
                       </ng-template>
                     </li>
-                    <li [ngbNavItem]="3">
-                      <a ngbNavLink>
-                        <div class="d-flex flex-row flex-lg-column flex-xl-row align-items-center justify-content-center">
-                          <i class="feather icon-users icon-xs me-sm-2 me-lg-0 me-xl-2 mb-md-1 mb-xl-0"></i>
-                          <p class="d-none d-sm-block">Contacts</p>
-                        </div>
-                      </a>
-                      <ng-template ngbNavContent>
-                        <div class="ps" [perfectScrollbar]>
-                          <p class="text-muted mb-1">Contacts</p>
-                          <ul class="list-unstyled chat-list px-1">
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status offline"></div>
-                                </figure>
-                                <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">Amiah Burton</p>
-                                    <div class="d-flex align-items-center">
-                                      <p class="text-muted tx-13">Front-end Developer</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex align-items-end text-body">
-                                    <i class="feather icon-message-square icon-sm text-primary me-2"></i>
-                                    <i class="feather icon-phone-call icon-sm text-primary me-2"></i>
-                                    <i class="feather icon-video icon-sm text-primary"></i>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status online"></div>
-                                </figure>
-                                <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">John Doe</p>
-                                    <div class="d-flex align-items-center">
-                                      <p class="text-muted tx-13">Back-end Developer</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex align-items-end text-body">
-                                    <i class="feather icon-message-square icon-sm text-primary me-2"></i>
-                                    <i class="feather icon-phone-call icon-sm text-primary me-2"></i>
-                                    <i class="feather icon-video icon-sm text-primary"></i>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status offline"></div>
-                                </figure>
-                                <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">Yaretzi Mayo</p>
-                                    <div class="d-flex align-items-center">
-                                      <p class="text-muted tx-13">Fullstack Developer</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex align-items-end text-body">
-                                    <i class="feather icon-message-square icon-sm text-primary me-2"></i>
-                                    <i class="feather icon-phone-call icon-sm text-primary me-2"></i>
-                                    <i class="feather icon-video icon-sm text-primary"></i>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                            <li class="chat-item pe-1">
-                              <a href="" (click)="false" class="d-flex align-items-center">
-                                <figure class="mb-0 me-2">
-                                  <img src="https://via.placeholder.com/37x37" class="img-xs rounded-circle" alt="user">
-                                  <div class="status offline"></div>
-                                </figure>
-                                <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
-                                  <div>
-                                    <p class="text-body">John Doe</p>
-                                    <div class="d-flex align-items-center">
-                                      <p class="text-muted tx-13">Front-end Developer</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex align-items-end text-body">
-                                    <i class="feather icon-message-square icon-sm text-primary me-2"></i>
-                                    <i class="feather icon-phone-call icon-sm text-primary me-2"></i>
-                                    <i class="feather icon-video icon-sm text-primary"></i>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </ng-template>
-                    </li> <!-- End contacts tab-->
                   </ul>
                   <div [ngbNavOutlet]="defaultNav" class="mt-3"></div>
                 </div>

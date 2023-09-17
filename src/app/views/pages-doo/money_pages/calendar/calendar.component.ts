@@ -1,14 +1,16 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { CalendarOptions, EventApi, DateSelectArg, EventClickArg } from '@fullcalendar/core';
-import { Draggable } from '@fullcalendar/interaction';
-import { INITIAL_EVENTS, createEventId } from 'src/app/views/pages/apps/calendar/event-utils';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+
+import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/angular';
+import { Draggable } from '@fullcalendar/interaction'; // for dateClick
+import { INITIAL_EVENTS, createEventId } from './event-utils';
+import ptLocale from '@fullcalendar/core/locales/pt-br';
 
 @Component({
-  selector: 'app-calendar-payments',
-  templateUrl: './calendar-payments.component.html',
-  styleUrls: ['./calendar-payments.component.scss']
+  selector: 'app-calendar',
+  templateUrl: './calendar.component.html',
+  styleUrls: ['./calendar.component.scss']
 })
-export class CalendarPaymentsComponent implements OnInit {
+export class CalendarComponent implements OnInit {
 
   @ViewChild('externalEvents', {static: true}) externalEvents: ElementRef;
 
@@ -27,7 +29,9 @@ export class CalendarPaymentsComponent implements OnInit {
     dayMaxEvents: true,
     select: this.handleDateSelect.bind(this),
     eventClick: this.handleEventClick.bind(this),
-    eventsSet: this.handleEvents.bind(this)
+    eventsSet: this.handleEvents.bind(this),
+    locales: [ptLocale], // Defina o idioma para português
+    locale: 'pt-br',
     /* you can update a remote database when these fire:
     eventAdd:
     eventChange:

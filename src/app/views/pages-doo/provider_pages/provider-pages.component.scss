@@ -1,0 +1,13 @@
+.ngb-rating {
+    font-size: 24px; /* Tamanho personalizado das estrelas */
+  }
+  
+  /* Defina a cor das estrelas como amarelo */
+  .ngb-rating-star {
+    color: yellow; /* Cor das estrelas */
+  }
+  
+  /* Personalize a cor das estrelas preenchidas */
+  .ngb-rating-star.checked {
+    color: yellow; /* Cor das estrelas preenchidas */
+  }
