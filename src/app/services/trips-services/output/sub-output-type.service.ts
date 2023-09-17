@@ -3,7 +3,7 @@ import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
 import { Injectable } from '@angular/core';
-import { SubOutputType } from 'src/app/shared/money-models/money-sub-output-type.model';
+import { SubOutputType } from 'src/app/models/money-models/money-sub-output-type.model';
 
 @Injectable()
 

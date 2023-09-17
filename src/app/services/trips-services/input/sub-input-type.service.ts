@@ -3,8 +3,7 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { TripInputModel } from 'src/app/shared/trips-models/input/trip-input.model';
-import { SubInputType } from 'src/app/shared/money-models/money-sub-input-type.model';
+import { SubInputType } from 'src/app/models/money-models/money-sub-input-type.model';
 
 @Injectable()
 

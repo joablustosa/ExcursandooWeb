@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { TrevelerModel } from 'src/app/shared/trips-models/trevelers/trip-trevelers.model';
+import { TrevelerModel } from 'src/app/models/trips-models/trevelers/trip-trevelers.model';
 
 @Injectable()
 

@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { TripModel } from 'src/app/shared/trips-models/trips/trip.model';
+import { TripModel } from 'src/app/models/trips-models/trips/trip.model';
 
 @Injectable()
 
@@ -34,7 +34,7 @@ export class TripService{
 
   public saveTrip(moneyTrip: TripModel) {
     
-    let token = localStorage.getItem("tokenSessao");
+    let token = localStorage.getItem("tokenSection");
     let headers = new HttpHeaders({
       'Content-Type':'application/json',
       'Authorization': `Bearer ${token}`
@@ -47,7 +47,7 @@ export class TripService{
 
 
   public putTrip(moneyTrip: TripModel) {
-    let token = localStorage.getItem("tokenSessao");
+    let token = localStorage.getItem("tokenSection");
     let headers = new HttpHeaders({
       'Content-Type':'application/json',
       'Authorization': `Bearer ${token}`

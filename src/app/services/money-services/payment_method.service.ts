@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { PaymentMethod } from 'src/app/shared/money-models/money-payment-method.model';
+import { PaymentMethod } from 'src/app/models/money-models/money-payment-method.model';
 
 
 @Injectable()

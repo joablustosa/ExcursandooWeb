@@ -16,14 +16,14 @@ import { LoginInterceptor } from './views/pages/auth/login/login.interceptor';
 import { LoginService } from './services/administrator/login.service';
 import { UserComponent } from './views/pages-doo/administrator_pages/user/user.component';
 import { ProfileComponent } from './views/pages-doo/administrator_pages/profile/profile.component';
+import { ListAllChecklistComponent } from './views/pages-doo/checklists_pages/list-all-checklist/list-all-checklist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
     UserComponent,
-    ProfileComponent,
-    
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

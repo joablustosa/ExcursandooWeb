@@ -1,0 +1,27 @@
+<table class="table table-striped">
+    <thead style="height: 60px;">
+        <tr>
+            <th scope="col">
+                <input type="checkbox" class="form-check-input" id="checkChecked" checked>
+            </th>
+            <th scope="col">Título</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let checklist of newList; index as i">
+            <th scope="row">
+                <div class="form-check mb-2">
+                    <input type="checkbox" class="form-check-input" id="checkChecked" checked>
+                </div>
+            </th>
+            <td>
+                <!-- <img [src]="" class="me-2" style="width: 20px" /> -->
+                {{ checklist.titulo }}
+            </td>
+            <td>{{ checklist.descricao }}</td>
+            <td>{{ checklist.status }}</td>
+        </tr>
+    </tbody>
+</table>

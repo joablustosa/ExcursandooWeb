@@ -14,9 +14,9 @@ export class LoginInterceptor implements HttpInterceptor{
   ){}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
-    if(localStorage.getItem('tokenSessao') != null){
+    if(localStorage.getItem('tokenSection') != null){
       const cloneReq = req.clone({
-        headers: req.headers.set('Authorization', `Bearer ${localStorage.getItem('tokenSessao')}`)
+        headers: req.headers.set('Authorization', `Bearer ${localStorage.getItem('tokenSection')}`)
       });
       return next.handle(cloneReq).pipe(
         tap(

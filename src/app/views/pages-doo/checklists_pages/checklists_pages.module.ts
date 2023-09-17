@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ChecklistsPagesComponent } from './checklists-pages.component';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListAllChecklistComponent } from './list-all-checklist/list-all-checklist.component';
 
 const routes: Routes = [
   {
@@ -13,12 +14,12 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'checklists',
-        pathMatch: 'full'
-      },
-      {
-        path: 'checklists',
-        component: ChecklistsPagesComponent
+        children: [
+          { 
+            path: ':id', 
+            component: ListAllChecklistComponent 
+          },
+        ]
       },
       // {
       //   path: 'new-trip',
@@ -34,7 +35,9 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    ChecklistsPagesComponent
+    ChecklistsPagesComponent,
+    ListAllChecklistComponent,
+
   ],
   imports: [
     CommonModule,

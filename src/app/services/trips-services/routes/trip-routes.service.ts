@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { TripRouteModel } from 'src/app/shared/trips-models/routes/routes-model';
+import { TripRouteModel } from 'src/app/models/trips-models/routes/routes-model';
 
 @Injectable()
 

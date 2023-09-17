@@ -1,1 +1,338 @@
-<p>new-trip works!</p>
+<div class="row">
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+
+        <h6 class="card-title">Dados Excursão</h6>
+
+        <form class="forms-sample">
+          <div class="row mb-3">
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Título:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Ex: Aparecida em Outubro">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Destino:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Ex: Aparecida do Norte - SP">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Data Partida:</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <input class="form-control" placeholder="dd/mm/yyyy"
+                    name="dp" [(ngModel)]="selectedDateStart" ngbDatepicker #d="ngbDatepicker">
+                <button class="input-group-text" type="button" (click)="d.toggle()">
+                  <i class="feather icon-calendar icon-md text-muted"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="input-group">
+                <input class="form-control" mask="Hh:m0:s0" placeholder="hh:mm:ss"/>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Data Volta:</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <input class="form-control" placeholder="dd/mm/yyyy"
+                    name="dp" [(ngModel)]="selectedDateStart" ngbDatepicker #d="ngbDatepicker">
+                <button class="input-group-text" type="button" (click)="d.toggle()">
+                  <i class="feather icon-calendar icon-md text-muted"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="input-group">
+                <input class="form-control" mask="Hh:m0:s0" placeholder="hh:mm:ss"/>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputMobile" class="col-sm-3 col-form-label">Categoria</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" id="exampleInputMobile" placeholder="Mobile number">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputMobile" class="col-sm-3 col-form-label">Sub-Categoria</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" id="exampleInputMobile" placeholder="Mobile number">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Descrição:</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Uma Viagem com tudo incluso, com um experiente excurseiro..." rows="5"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-secondary me-2">Resetar</button>
+          <button class="btn btn-success">Próximo</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+
+        <h6 class="card-title">Dados Serviço</h6>
+
+        <form class="forms-sample">
+          <div class="row mb-3">
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Embarques</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Email">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Extras</label>
+            <div class="col-sm-9">
+              <input type="email" class="form-control" id="exampleInputEmail2" autocomplete="off" placeholder="Email">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputMobile" class="col-sm-3 col-form-label">Vagas</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" id="exampleInputMobile" placeholder="Mobile number">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputMobile" class="col-sm-3 col-form-label">Gratuidade</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" id="exampleInputMobile" placeholder="Mobile number">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">CEP:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="exampleInputUsername2" placeholder="21072-180">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Endereço:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Rua Souza Neto, 40">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Bairro:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Penha">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Cidade:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Rio de Janeiro">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-secondary me-2">Voltar</button>
+          <button class="btn btn-success">Próximo</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+
+        <h6 class="card-title">Dados Pagamento e Capacidade</h6>
+
+        <form class="forms-sample">
+          <div class="row mb-3">
+            <label for="exampleInputUsername2" class="col-sm-5 col-form-label">Formas de Pagamento</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Email">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Valor</label>
+            <div class="col-sm-9">
+              <input type="email" class="form-control" id="exampleInputEmail2" autocomplete="off" placeholder="Ex: 23,00">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputMobile" class="col-sm-3 col-form-label">Criança</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" id="exampleInputMobile" placeholder="Ex: 0,00">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="exampleInputMobile" class="col-sm-3 col-form-label">Promoção</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" id="exampleInputMobile" placeholder="Ex: 10,00">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-secondary me-2">Voltar</button>
+          <button type="button" class="btn btn-icon-text btn-facebook">
+            <i class="feather icon-save btn-icon-prepend"></i>
+            Salvar Excursão
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+
+
+<div class="row">
+    <h1>Nova Excursão</h1>
+    <div class="col-sm-12">
+      <div class="row flex-grow">
+        <div class="col-12 grid-margin stretch-card">
+          <div class="card card-rounded">
+            <div class="card-body">
+              <form [formGroup]="firstFormGroup">
+                <div class="row">
+                  <h1>Informações da Excursão</h1>
+                </div>
+                <div class="row ">
+                  <div class="col-sm-12 p-3" (change)="onImageSelected($event)">
+                    <form id="file-upload-form" class="text-center" style="background-color: grey; width: 100%; height: 200px; cursor: pointer; border-radius: 10px;">
+                      <input id="file-upload" type="file" name="fileUpload" (change)="onImageSelected($event)" accept=".jpg,.jpeg,.png,.pdf"/>
+                      <label for="file-upload" id="file-drag">
+                        <div id="start" style="cursor: pointer;">
+                          <div class="container-fluid text-center p-3">
+                            <div *ngIf="previewImages != ''" class="image-preview">
+                              <img [src]="previewImages" width="100px" height="100px" class="rounded mx-auto d-block">
+                            </div>
+                            <icon *ngIf="previewImages == ''" style="width: 80px; height: 80px; font-size: 80px; margin-top: 45px; color: white;">image</icon> 
+                          </div>
+                        </div>
+                      </label>
+                    </form>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                      <label>Título</label>
+                      <input matInput placeholder="Dê um nome a sua Excursão" formControlName="title" required>
+                  </div>
+                  <div class="col-sm-2">
+                      <label>CEP Inicial</label>
+                      <input matInput placeholder="Ex: 21072180" (input)="onAddressInput($event)" required>
+                  </div>
+                  <div class="col-sm-4">
+                      <label>Endereço inicial</label>
+                      <input matInput placeholder="Ex: Rua das Auroras, 145" formControlName="address" [value]="address.logradouro" required>
+                  </div>
+                  <div class="col-sm-2">
+                      <label>Bairro</label>
+                      <input matInput placeholder="Penha - RJ" formControlName="neighborhood" [value]="address.bairro" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                      <label>Origem</label>
+                      <input matInput placeholder="Ex: Rio de Janeiro" formControlName="departure" [value]="address.localidade + ' - ' + address.uf" required>
+                  </div>
+                  <div class="col-sm-4">
+                      <label>Destino</label>
+                      <input matInput placeholder="Ex: Aparecida - SP" formControlName="arrival" required>
+                  </div>
+                  <div class="col-sm-4"> -->
+                      <!-- <label>Pontos de embarque</label>
+                      <input matInput type="text" [value]="pointsReference.data.length + ' Pontos de embarques'" (click)="openWindowPoints(templateBoardingPoints)">
+                      <button matSuffix icon-button aria-label="Clear"
+                        (click)="openWindowPoints(templateBoardingPoints)">
+                        <icon>add</icon>
+                      </button> -->
+                  <!-- </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3"> -->
+                    <!-- <form-field appearance="outline" class="full-width">
+                      <label>Data da Ida</label>
+                      <input matInput [matDatepicker]="pickerIda" formControlName="date_start">
+                      <datepicker-toggle matIconSuffix [for]="pickerIda"></datepicker-toggle>
+                      <datepicker #pickerIda panelClass="datepickerOne"></datepicker>
+                    </form-field> -->
+                  <!-- </div>
+                  <div class="col-sm-2">
+                      <label>Horário da Ida</label>
+                      <select formControlName="hour_start" required>
+                        <option *ngFor="let hour of hours" [value]="hour">
+                          {{ hour < 10 ? '0' + hour : hour }}:00 </option>
+                      </select>
+                  </div>
+                  <div class="col-sm-3"> -->
+                    <!-- <form-field appearance="outline" class="full-width">
+                      <label>Data Volta</label>
+                      <input matInput [matDatepicker]="pickerVolta" formControlName="date_end">
+                      <datepicker-toggle matIconSuffix [for]="pickerVolta"></datepicker-toggle>
+                      <datepicker #pickerVolta panelClass="datepickerOne"></datepicker>
+                    </form-field> -->
+                  <!-- </div>
+                  <div class="col-sm-2">
+                      <label>Horário da Volta</label>
+                      <select formControlName="hour_end" required>
+                        <option *ngFor="let hour of hours" [value]="hour">
+                          {{ hour < 10 ? '0' + hour : hour }}:00 </option>
+                      </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <h1 class="span">Informações do Serviço</h1>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                      <label>Quantidade de vagas</label>
+                      <input matInput placeholder="Ex: 40" formControlName="seats" required>
+                  </div>
+                  <div class="col-sm-3">
+                      <label>Forma de Pagamento</label> -->
+                      <!-- <select [formControl]="paymentsControl" multiple="true">
+                        <option *ngFor="let paymentOption of paymentOptions" [value]="paymentOption">
+                          {{ paymentOption }}
+                        </option>
+                      </select> -->
+                  <!-- </div>
+                  <div class="col-sm-3">
+                      <label>Valor Excursão</label>
+                      <input matInput placeholder="Ex: R$: 400,00" formControlName="value" type="number"
+                        required>
+                  </div>
+                  <div class="col-sm-3">
+                      <label>Diferenciais</label> -->
+                      <!-- <input matInput type="text" [value]="tempComponents.length + ' Diferenciais na Excursão'" (click)="openWindowPoints(templateComponents)">  -->
+                      <!-- <button matSuffix icon-button aria-label="Clear"
+                        (click)="openWindowPoints(templateComponents)">
+                        <icon>add</icon>
+                      </button> -->
+                  <!-- </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <label>Descrição</label>
+                      <textarea matInput
+                        placeholder="Ex: Uma excursão para família, com todo conforto. Transporte ida e volta, Acomodação, Almoço e passeio incluso."
+                        formControlName="description" required></textarea>
+                  </div>
+                </div>
+                <div class="modal-footer" style="border: none;">
+                  <button type="button" (click)="saveTrip()" class="btn btn-info btn-lg sub-topo__btn">
+                    Adicionar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  

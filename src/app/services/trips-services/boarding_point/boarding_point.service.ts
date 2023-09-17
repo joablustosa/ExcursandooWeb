@@ -3,8 +3,8 @@ import { Router } from '@angular/router'
 import { HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { AppConstants } from 'src/app/AppConstants';
-import { BoardingPointModel } from 'src/app/shared/trips-models/boarding_point/boarding_points.model';
-import { TripBoardingPoint } from 'src/app/shared/trips-models/trips/trip.model';
+import { BoardingPointModel } from 'src/app/models/trips-models/boarding_point/boarding_points.model';
+import { TripBoardingPoint } from 'src/app/models/trips-models/trips/trip.model';
 
 @Injectable()
 

@@ -67,11 +67,11 @@ export class LoginService {
     return this.http.post(AppConstants.baseLogin, usuarioApi, options).subscribe(data => {
       var token = JSON.parse(JSON.stringify(data)).accessToken;
       if (token != null) {
-        localStorage.setItem('tokenSessao', token);
+        localStorage.setItem('tokenSection', token);
         this.decodedToken = this.jwtHelper.decodeToken(token)
-        var usuarioSessao = this.decodedToken.unique_name[0]
+        var userSection = this.decodedToken.unique_name[0]
         var userAud = JSON.stringify(JSON.parse(this.decodedToken.aud[0]).Menus);
-        localStorage.setItem('usuarioSessao', usuarioSessao);
+        localStorage.setItem('userSection', userSection);
         localStorage.setItem('userAud', userAud);
       } else {
         this.router.navigate(["inicio"]);
@@ -97,7 +97,7 @@ export class LoginService {
 
   logoutUsuario() {
     localStorage.removeItem('tokenSessao');
-    localStorage.removeItem("usuarioSessao");
+    localStorage.removeItem("userSection");
     localStorage.removeItem("userAud");
     this.router.navigate(['login']);
   }
@@ -105,13 +105,13 @@ export class LoginService {
 
   sairUsuario() {
     localStorage.removeItem('tokenSessao');
-    localStorage.removeItem("usuarioSessao");
+    localStorage.removeItem("userSection");
     localStorage.removeItem("userAud");
     this.router.navigate(['login']);
   }
 
 
   buscaIdUsuarioLogado() {
-    localStorage.getItem('usuarioSessao');
+    localStorage.getItem('userSection');
   }
 }
