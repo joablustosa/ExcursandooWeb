@@ -20,28 +20,32 @@
             </div>
             <div class="email-aside-nav" id="asideNav" [ngbCollapse]="isAsideNavCollapsed">
               <ul class="nav flex-column">
-                <li class="nav-item" [ngClass]="{'menu-item-selected': 'Todos' === selectedItem}" (click)="selected('Todos', 0)">
+                <li class="nav-item" [ngClass]="{'menu-item-selected': 'Todos' === selectedItem}"
+                  (click)="selected('Todos', 0)">
                   <a class="nav-link d-flex align-items-center">
                     <!-- <i class="feather icon-inbox icon-lg me-2"></i> -->
                     Todos
                     <span class="badge bg-info fw-bolder ms-auto">2</span>
                   </a>
                 </li>
-                <li class="nav-item" [ngClass]="{'menu-item-selected': 'Incompletos' === selectedItem}" (click)="selected('Incompletos', 1)">
+                <li class="nav-item" [ngClass]="{'menu-item-selected': 'Incompletos' === selectedItem}"
+                  (click)="selected('Incompletos', 1)">
                   <a class="nav-link d-flex align-items-center">
                     <!-- <i class="feather icon-mail icon-lg me-2"></i> -->
                     Incompletos
                     <span class="badge bg-warning fw-bolder ms-auto">4</span>
                   </a>
                 </li>
-                <li class="nav-item" [ngClass]="{'menu-item-selected': 'Completos' === selectedItem}" (click)="selected('Completos', 2)">
+                <li class="nav-item" [ngClass]="{'menu-item-selected': 'Completos' === selectedItem}"
+                  (click)="selected('Completos', 2)">
                   <a class="nav-link d-flex align-items-center">
                     <!-- <i class="feather icon-briefcase icon-lg me-2"></i> -->
                     Completos
                     <span class="badge bg-success fw-bolder ms-auto">4</span>
                   </a>
                 </li>
-                <li class="nav-item" [ngClass]="{'menu-item-selected': 'Vencidos' === selectedItem}" (click)="selected('Vencidos', 3)">
+                <li class="nav-item" [ngClass]="{'menu-item-selected': 'Vencidos' === selectedItem}"
+                  (click)="selected('Vencidos', 3)">
                   <a class="nav-link d-flex align-items-center">
                     <!-- <i class="feather icon-file icon-lg me-2"></i> -->
                     Vencidos
@@ -52,23 +56,40 @@
             </div>
           </div>
           <div class="col-lg-9">
-            <div class="p-3 border-bottom">
-              <div class="row align-items-center">
-                <div class="col-lg-6">
-                  <div class="d-flex align-items-end mb-2 mb-lg-0">
-                    <i class="feather icon-inbox icon-xl me-2"></i>
-                    <h4 class="me-1">Lista de tarefas</h4>
+            <form [formGroup]="checklistForm">
+              <div class="p-3 border-bottom">
+                <div class="row align-items-center">
+                  <div class="col-lg-3">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Título" formControlName="title">
+                    </div>
                   </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Pesquisar tarefa...">
-                    <button class="btn btn-light btn-icon" type="button" id="button-search-addon"><i
-                        class="feather icon-search"></i></button>
+                  <div class="col-lg-3">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Descrição" formControlName="description">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Date Vencimento"
+                        formControlName="datetime_status">
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <ng-select [items]="people" bindLabel="name" bindValue="id" placeholder="Categoria"
+                      formControlName="checklist_name" [(ngModel)]="selectedSearchPersonId">
+                    </ng-select>
+                  </div>
+                  <div class="col-lg-1">
+                    <div class="input-group">
+                      <button type="button" class="btn btn-success btn-icon" (click)="saveChecklist()">
+                        <i class="feather icon-check-square"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
             <router-outlet></router-outlet>
           </div>
         </div>

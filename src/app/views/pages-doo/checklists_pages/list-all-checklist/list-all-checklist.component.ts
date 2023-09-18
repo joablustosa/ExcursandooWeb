@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ChecklistModel } from 'src/app/models/checklist-models/checklist.model';
+import { ChecklistService } from 'src/app/services/checklist-services/checklist.service';
 
 @Component({
   selector: 'app-list-all-checklist',
@@ -8,49 +10,27 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ListAllChecklistComponent implements OnInit {
   newList: any[] = []
-  checklists = [
-    {
-      "id": 1,
-      "titulo": "Lista de compras",
-      "descricao": "Lista de compras, Lista de compras, Lista de compras, Lista de compras",
-      "vencimento": "2023-01-01",
-      "status": 1,
-      "posicao": 1
-    },
-    {
-      "id": 2,
-      "titulo": "Lista de compras",
-      "descricao": "Lista de compras, Lista de compras, Lista de compras, Lista de compras",
-      "vencimento": "2023-01-01",
-      "status": 0,
-      "posicao": 2
-    },
-    {
-      "id": 3,
-      "titulo": "Lista de compras",
-      "descricao": "Lista de compras, Lista de compras, Lista de compras, Lista de compras",
-      "vencimento": "2023-01-01",
-      "status": 2,
-      "posicao": 3
-    },
-    {
-      "id": 4,
-      "titulo": "Lista de compras",
-      "descricao": "Lista de compras, Lista de compras, Lista de compras, Lista de compras",
-      "vencimento": "2023-01-01",
-      "status": 3,
-      "posicao": 3
-    }
-  ]
+  checklists: ChecklistModel[];
+
   constructor(
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private checklistService: ChecklistService,
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
-      const id = params['id'];
-      this.newList = this.checklists.filter(c => c.status == id)
-    });
+    this.getChacklist();
+  }
+
+  getChacklist(){
+    this.checklistService.getAllChecklist().subscribe(
+      checklistResponse => {
+        this.checklists = checklistResponse as ChecklistModel[];
+        this.activatedRoute.params.subscribe(params => {
+          const id = params['id'];
+          this.newList = this.checklists.filter(c => c.status == id)
+        });
+      }
+    )
   }
 
 }
